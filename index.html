@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Draft For BPL 2023</title>
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header class="bg-black">
+        <section class="flex gap-3 px-10 pt-24  pb-20">
+            <div class="w-3/12">
+                <img class="w-full" src="./images/teambpl.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-medium text-orange-500 mb-5">Player Draft BPL 2023 </h1>
+                <P class="text-white">BPL 2023 Draft: The IPL 2023 is set to play with 2 new teams in addition to the
+                    existing 8 teams. The
+                    addition of 2 new
+                    teams brings the much-awaited mega auction for this year’s BPL tournament.</P>
+            </div>
+            <div class="w-3/12">
+                <img class="w-full" src="./images/bpl.png" alt="">
+            </div>
+        </section>
+
+    </header>
+
+    <main class="  bg-gray-700 ">
+        <section class="w-10/12 mx-auto flex gap-3 pt-10">
+
+            <div class="grid grid-cols-3 w-4/6 gap-2">
+
+                <div class="card card-compact  bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/avd.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">ABD Villers</h2>
+                        <p>Hundred: 25, Fifty: 75</p>
+
+                        <button class="btn btn-primary disabled:opacity-75" id="afif"
+                            onclick=" selectPlayer(this)">SELECT</button>
+
+                    </div>
+                </div>
+
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/ltn3.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Liton Dash</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="liton" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/skb4.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Sakib Al Hasan</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="sakib" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/mhd.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Mahmd. Riad</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="riad" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/musq.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Musfiqur Rahim</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="musfiq" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/moin.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Moen Ali</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="taskin" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/ikbal.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Tamim Ikbal</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="afif" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/tak4.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Taskin Ahmed</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="afif" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+                <div class="card card-compact bg-gray-800 text-white shadow-xl">
+                    <figure><img src="./images/kohli.jpg" alt="" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Virat Kohli</h2>
+                        <p>Dicmical: 145, Fifty: 15</p>
+                        <button class="btn btn-primary" id="afif" onclick=" selectPlayer(this)">SELECT</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="w-2/6 ">
+                <div class="bg-slate-900 text-white px-10 pb-6">
+                    <p class="text-2xl font-medium border-b pb-3 text-center pt-3">Total Select Player <span
+                            id="total-players" class="text-blue-500">0</span>
+                    </p>
+                    <p class="text-red-400 text-center font-medium text-sm hidden" id="display-msg">Only Select Five
+                        Player To
+                        Drafts </p>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="table  bg-slate-600 text-gray-900 w-full">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-lg font-medium">Selected Player</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="player-cart" class="font-medium">
+                                <!-- <tr>
+                                                        <th>1</th>
+                                                        <td>Cy Ganderton</td>
+                                                        <td>Quality Control Specialist</td>
+                                                      </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="bg-black mt-32 flex flex-col gap-3 items-center pb-8">
+
+                    <h3 class="text-xl font-medium text-white pt-4">Budget</h3>
+
+                    <!-- <label class="text-white" for="">Per Player :</label> -->
+                    <div>
+                        <span class="text-white">Per Player: </span>
+                        <input class=" px-4" id="player-price" type="text">
+
+                    </div>
+                    <button class="bg-blue-900 font-medium text-white rounded px-3 py-2 w-2/5"
+                        id="btn-calculate">Calculate</button>
+
+
+
+
+
+
+                    <p class="text-white text-center text-lg font-medium bg-gray-900 px-3 py-2 w-3/4">Total Player
+                        Price : <span class="ml-4">$</span><span id="player-expense">000</span>
+                    </p>
+
+                    <div class="pt-5">
+                        <span class="text-white pr-2" for="">Maneger :</span>
+                        <input class="px-3" id="maneger-price" type="text">
+                    </div>
+
+
+                    <div>
+                        <span class="text-white ">Coach :</span>
+
+                        <!-- <label class="text-white pr-1" for="">Coach:</label> -->
+
+                        <input class="px-3" id="coach-price" type="text">
+                    </div>
+
+                    <button class="bg-blue-900 font-medium text-white rounded px-3 py-2" id="btn-total">Calculate
+                        Total</button>
+
+                    <p class="text-white text-center text-lg font-medium bg-gray-900 px-3 py-2 w-3/4">Total Expense :
+                        $<span id="total-expense">000</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
